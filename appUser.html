@@ -1,0 +1,52 @@
+<div ng-app>
+	<section id="lists-container" class="lists-container" ng-controller="listsCtrl as listsCtrl">
+
+		<div class="explanation"> 
+			Your tasks, which were issued by the manager. If you done the task, mark it as done.
+		 </div>
+
+		<!--- COUNTER OF TASKS -->
+		<div id="counterOfTasks">
+		  	<p> <i class="fa fa-check"></i> tasks were completed:</p>
+		  	<div>
+		   	 <div id = "PercentageOfCompletedTasks"> {{doneCounter}} %</div>
+			</div>
+	  	</div>
+
+		<!--- CREATE LISTS -->
+		<div class="row">
+			
+			<!--- CREATE LIST -->
+			<section class="list list-inline" ng-repeat="list in listsCtrl.lists" ng-controller="listCtrl as listCtrl">
+					
+				<h1>{{list.listName}}</h1>
+
+				<!--- CREATE CARDS ON LISTS -->
+				<div class="card" ng-controller = "cardCtrl as cardCtrl" ng-repeat="card in listCtrl.getCards(list)">
+					<div ng-if="!cardCtrl.isEditing">
+	       				 {{card.description}}
+	       				 <div ng-click="cardCtrl.editCard(card)"
+	       					class="edit-small edit-card hand">
+	       					<i class="fa fa-pencil-square-o" aria-hidden="true" title="Click to edit card"></i>
+	  					</div>
+  					</div>
+
+					<!--- EDIT CARD -->
+  					<div ng-if="cardCtrl.isEditing">
+					    <form ng-submit="cardCtrl.updateCard()">
+					      <input type="text" ng-model="cardCtrl.editingCard.description" close-editing is-editing = 'cardCtrl.isEditing'>
+					      <select class="select-list" 
+					      		  ng-model='cardCtrl.editingCard.list_id'
+					      		  ng-change='cardCtrl.updateCard()' 
+					      		  ng-options="list.id as list.listName for list in listsCtrl.lists">
+					      </select>
+					    </form>
+				    </div>
+				</div>
+
+
+			</section>
+
+		</div>
+	</section>
+</div>

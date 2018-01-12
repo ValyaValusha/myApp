@@ -1,0 +1,99 @@
+<div id="home"></div>
+<!-- SECTION ABOUT APPLICATION -->
+<div class="container" id="about">
+	<div class="aboutUs">
+		<h3>ABOUT APPLICATION</h3>
+		<img src="img/1.jpg" alt="Photo">
+	  	<p>
+	  		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus perspiciatis qui repellat, aperiam amet dignissimos soluta inventore exercitationem impedit excepturi vero et ea dolore voluptas enim suscipit id quo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		  	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		  	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		  	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		  	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		</p>
+	</div>
+</div>
+
+<!-- SECTION TO GO TO THE APPLICATION -->
+<div id="goToApplication">
+	<div class="bgimg-2 display-container">
+		<div class="display-middle">
+			<span><a href="#!application">APPLICATION</a></span>
+		</div>
+	</div>
+</div>
+	
+
+<!-- GALLERY SECTION-->
+<div class="container" id="gallery">
+	<h3>GALLERY OF INSPIRATION</h3>
+	<div class="lineOfGallery" ng-controller="paginationCtrl" ng-cloak>
+		<div class="picture" ng-repeat="item in items | startFrom: startingItem() | limitTo: itemsPerPage" ng-cloak>
+		   <img ng-src = '{{item}}' onclick="onClick(this)" alt="Image" ng-cloak>
+		</div>
+		<div id="pagination" class="row">
+		  <button ng-disabled="firstPage()" ng-click="pageBack()" ng-cloak>Back</button>
+		  <span ng-cloak>{{currentPage+1}} of {{numberOfPages()}}</span>
+		  <button ng-disabled="lastPage()" ng-click="pageForward()" ng-cloak>Forward</button>
+	   	</div>
+	</div>
+</div>
+
+<!-- MODAL FOR FULL SIZE IMAGES ON CLICK -->
+<div id="modal01" class="modal" onclick="this.style.display='none'">
+	<span class="button" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+	<div>
+		<img id="img01" width="400" height="300" alt="Image">
+		<p id="caption"></p>
+	</div>
+</div>
+
+
+<!-- CONTACT SECTION -->
+<div id="contacts">
+	<div class="bgimg-3 display-container">
+		<div class="display-middle">
+			<span>CONTACT</span>
+		</div>
+	</div>
+</div>
+
+<div class="container" id="contact">
+	<h3>WHERE WE WORK</h3>
+	<p><em>We'd love your feedback!</em></p>
+	<div class="contactsContainer">
+
+		<!-- Add Google Maps -->
+   		<div class=" map container" ng-controller="mapCtrl">
+	    	<div id="googleMap"></div>
+	    </div> 
+
+	    <div class="contactMe">
+		   <div>
+			   <i class="fa fa-map-marker fa-fw"></i> Kiev, UA<br>
+			   <i class="fa fa-phone fa-fw"></i> Phone: +38(099)-056-76-80<br>
+			   <i class="fa fa-envelope fa-fw"></i> Email: shinshilka.valya@gmail.com<br>
+		   </div>
+		   <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave us a note:</p>
+		   <form action="#" target="_blank">
+		       <div>
+		          <div>
+		            <input type="text" placeholder="Name" required name="Name">
+		          </div>
+		          <div>
+		            <input type="text" placeholder="Email" required name="Email">
+		          </div>
+		        </div>
+		        <input type="text" placeholder="Message" required name="Message">
+		        <button class="button right" type="submit">
+		          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+		        </button>
+		    </form>
+	    </div>
+	</div>
+</div>

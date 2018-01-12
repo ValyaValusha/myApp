@@ -1,0 +1,43 @@
+<div class="explanation loginExplanation">
+	If you have a profile then sign in, if you haven't, then <a href="#!login#signUp">sign up</a>.
+</div>
+
+
+<div id="login" ng-controller="loginCtrl">
+	<div id ="signIn"> 
+		<h3>SIGN IN</h3> 
+	</div>
+	<form action="/" id="myLogin">
+		<div><input type="text" name="username" id="username" ng-model="username" placeholder="Username*" required></div>
+		<div><input type="password" name="password" id="password" ng-model="password" placeholder="Password*" required></div>
+		<div><button type="button" class="button" ng-click="submit()"><i class="fa fa-sign-in"></i>  SIGN IN</button></div>
+		<p>{{Result}}</p>
+		
+	</form>
+
+<!-- 	<div ng-repeat="user in users">
+		{{user.Username}}
+		{{user.Password}}
+	</div> -->
+	<div id ="signUp" > 
+		<h3>SIGN UP</h3> 
+	</div>
+	<form action="/" id="SignUp" name="SignUp">
+		<div><input type="text" name="newUsername" id="newUsername" ng-model="newUsername" placeholder="Username*" pattern="[A-Za-z0-9]{1,15}" required></div>
+		<div><input type="password" name="newPassword" id="newPassword" ng-model="newPassword" placeholder="Password*" pattern="[A-Za-z0-9]{3,15}" required></div>
+		<div><input type="email" name="newEmail" id="newEmail" ng-model="newEmail" placeholder="Email*" required></div>
+		<div><button type="button" class="button" ng-click="signUp()"><i class="fa fa-address-card-o"></i> SIGN UP</button></div>
+		<p>{{result}}</p>
+		<p ng-show="SignUp.newUsername.$invalid && SignUp.newUsername.$dirty">
+			Please, enter a username of 1-15 characters long, using only numbers and latin letters.
+		</p>
+		<p ng-show="SignUp.newPassword.$invalid && SignUp.newPassword.$dirty">
+			Please, enter a password of 3-15 characters long, using only numbers and latin letters.
+		</p>
+		<p ng-show="SignUp.newEmail.$invalid && SignUp.newEmail.$dirty">
+			Please, enter a valid email.
+		</p>
+	</form>
+
+</div>
+

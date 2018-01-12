@@ -1,0 +1,600 @@
+/*------------------INITIAL STYLES----------------------------------*/
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif; 
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  color: 242424;
+  line-height: 1.8; 
+}
+
+a, i {
+  color: inherit;
+}
+/*------------------STYLES FOR NAVIGATION---------------------------------*/
+.top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; 
+}
+
+.bar {
+  width: 100%;
+  overflow: hidden; 
+}
+
+.bar:before, .bar:after {
+  content: "";
+  display: table;
+  clear: both; 
+}
+
+.bar-item {
+  display: block;
+  padding: 8px 16px;
+  border: none;
+  outline: none; 
+}
+
+.bar .bar-item {
+  float: left;
+  width: auto; 
+}
+
+.bar-block .bar-item {
+  float: none;
+  width: 100%;
+  text-align: left;
+  white-space: normal; 
+}
+
+#myNavbar {
+  font-size: 14px;
+  color: #363434; 
+}
+
+#myNavbar .right {
+  float: right;
+  margin-right: 35px; 
+}
+
+#myNavbar .right:hover {
+  color: #fff;
+  background-color: #000; 
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap; 
+}
+
+.button:hover,  #login form .button:hover {
+  color: #000;
+  background-color: #ccc; 
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3; 
+}
+
+#navDemo {
+  color: #000;
+  background-color: #fff; 
+}
+
+.item-card {
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); 
+}
+
+.animate-top {
+  position: relative;
+  animation: animatetop 0.4s; 
+}
+
+.top .show {
+  display: block; 
+}
+
+/*------------------------STYLES FOR BANNER------------------------------*/
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.bgimg-1 {
+  background-image: url("../img/banner/banner1.jpg");
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  min-height: 100%; 
+}
+
+#contacts span, #goToApplication span {
+  color: #fff;
+  letter-spacing: 24px;
+  font-size: 36px; 
+}
+
+.bgimg-2 {
+  background-image: url("../img/application.jpg");
+  min-height: 300px; 
+}
+
+.bgimg-3 {
+  background-image: url("../img/contacts.jpg");
+  min-height: 300px; 
+}
+
+#goToApplication span a {
+  color: #fff;
+  text-decoration: none; 
+}
+
+.display-container {
+  position: relative;
+  opacity: 0.85; 
+}
+
+.display-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center; 
+}
+
+.display-middle span {
+  padding: 12px 24px;
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #fff;
+  background-color: #000;
+  animation: opac 0.8s; 
+}
+
+/*-------------STYLES FOR MAIN CONTENT------------------------*/
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 0.01em 16px;
+  padding-top: 17px;
+  padding-bottom: 64px;
+  color: #777; 
+}
+
+.container p, .container h3 {
+  padding: 2px;
+  text-align: center; 
+}
+
+.aboutUs {
+  clear: both; 
+}
+
+.aboutUs img {
+  float: left;
+  height: auto;
+  margin: 0 auto;
+  padding: 12px 24px;
+  opacity: 0.90;
+  border-radius: 4px; 
+}
+
+#googleMap {
+  width: 100%;
+  height: 400px;
+  filter: grayscale(45%);
+  border-radius: 18px; 
+}
+
+.contactMe {
+  padding: 0.01em 16px; 
+}
+
+.map, .contactMe {
+  display: inline-block;
+  vertical-align: top; 
+}
+
+.contactsContainer {
+  margin: 16px 0; 
+}
+
+.contactMe {
+  margin-top: 20px; 
+}
+
+.contactMe > div {
+  margin-bottom: 16px;
+  font-size: 18px; 
+}
+
+.contactMe > div i {
+  margin-right: 16px;
+  font-size: 24px; 
+}
+
+.contactMe > div i:hover {
+  color: #000; 
+}
+
+.contactMe form > div {
+  margin: 0 -16px 8px -16px;
+  padding: 0 8px; 
+}
+
+.contactMe form div input {
+  width: 90%; 
+}
+
+.contactMe form > input {
+  width: 95%; 
+}
+
+.contactMe form > div div {
+  float: left;
+  width: 46.7%;
+  padding: 0 8px; 
+}
+
+.contactMe input {
+  margin: 15px;
+  padding: 8px;
+  display: block;
+  border: none;
+  border: 1px solid #ccc; 
+}
+
+.contactMe form button, #login form .button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 15px;
+  border: none;
+  color: #fff;
+  background-color: #000; 
+}
+
+.contactMe form {
+  text-align: center; 
+}
+
+/*-------------STYLES FOR GALLERY-----------------------*/
+#gallery {
+  min-height: 900px;
+  padding: 32px 0; 
+}
+
+#gallery h3, #signIn h3, #signUp h3{
+  color: #777;
+  font-size: 23px;
+  text-align: center; 
+}
+
+.picture {
+  padding-right: 8px;
+  display: inline-block; 
+}
+
+.picture img {
+  width: 100%; 
+}
+
+.picture:hover {
+  opacity: 0.60; 
+}
+
+.lineOfGallery {
+  padding: 0 8px;
+  text-align: center; 
+}
+
+#gallery button {
+  padding: 12px 24px;
+  color: #000;
+  background-color: #f1f1f1;
+  border: none; 
+}
+
+#modal01 {
+  display: none;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 3; 
+}
+
+#modal01 span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 18px;
+  color: #fff;
+  background-color: #000; 
+}
+
+#modal01 div {
+  position: relative;
+  padding: 24px 0;
+  outline: 0;
+  width: 50%;
+  margin: 0 auto;
+  background-color: transparent;
+  text-align: center;
+  animation: animatezoom 0.6s; 
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+#modal01 p {
+  font-size: 18px;
+  opacity: 0.60; 
+}
+
+
+/*-----------------STYLES FOR SIGN IN AND SIGN UP--------------------------------------*/
+#login {
+  height: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+#login form {
+  width: 100%;
+  padding: 0;
+}
+#login input, #login button {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+#login input:hover {
+  border-color: #ccc;
+}
+
+#login form div {
+  margin: 10px;
+}
+
+#login form p {
+  color: #777;
+  text-align: center;
+}
+
+/*-----------------STYLES FOR FOOTER---------------------------------------*/
+footer {
+  padding: 44px 0;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  opacity: 0.6; 
+}
+
+footer:hover {
+  opacity: 1; 
+}
+
+#backToHome {
+  padding: 9px 12px; 
+}
+
+#backToHome a {
+  color: #000;
+  background-color: #f1f1f1; 
+}
+
+#backToHome i {
+  margin-right: 16px; 
+}
+
+.media {
+  margin: 16px 0;
+  font-size: 24px; 
+}
+
+.media i:hover {
+  opacity: 0.6; 
+}
+
+/*-----------------MEDIA-REQUEST--------------------------------------------*/
+@media (min-width: 993px) {
+  #gallery {
+    max-width: 980px;
+    margin: auto; 
+  }
+
+  .picture {
+    width: 23%; 
+  }
+
+  #modal01 div p {
+    color: #fff; 
+  }
+
+  .hide-large {
+    display: none; 
+  }
+
+  .aboutUs img {
+    max-width: 40%; 
+  }
+
+  .map {
+    width: 40%; 
+  }
+
+  .contactMe {
+    width: 50%; 
+  }
+
+  #gallery button {
+    margin: 64px; 
+  }
+
+  #login input, #login button {
+    width: 30%;
+    height: 30px;
+  } 
+
+  #login button {
+    height: 50px;
+    width: 32%;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .hide-medium {
+    display: none; 
+  }
+
+  .aboutUs img {
+    max-width: 60%; 
+  }
+
+  #modal01 div p {
+    color: #fff; 
+  }
+
+  .picture {
+    width: 23%; 
+  }
+
+  .map {
+    width: 50%; 
+  }
+
+  .contactMe {
+    width: 40%; 
+  }
+
+  .contactMe form > div div {
+    float: none;
+    width: 90%; 
+  }
+
+  .contactMe form input {
+    padding: 13px; 
+  }
+
+  .contactMe form > input {
+    width: 85%; 
+  }
+
+  #gallery button {
+    margin: 64px; 
+  } 
+  #login input, #login button{
+    width: 70%;
+    height: 40px;
+  } 
+  
+  #login button {
+    height: 70px;
+    width: 75%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .hide-small {
+    display: none; 
+  }
+
+  .hide-medium:first-child {
+    display: block; 
+  }
+
+  #contacts span, #goToApplication span {
+    font-size: 24px;
+    letter-spacing: 14px; 
+  }
+
+  .picture {
+    width: 45%; 
+  }
+
+  #modal01 div img {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle; 
+  }
+
+  #modal01 div p {
+    color: #fff; 
+  }
+
+  .aboutUs img {
+    max-width: 85%; 
+  }
+
+  .contactsContainer {
+    margin: 15px; 
+  }
+
+  .map, .contactMe {
+    display: block; 
+  }
+
+  .map {
+    width: 90%; 
+  }
+
+  .contactMe {
+    width: 90%; 
+  }
+
+  #gallery button {
+    margin: 14px; 
+  } 
+
+  #login input, #login button {
+    width: 80%;
+    height: 20px;
+  } 
+  
+  #login button {
+    margin: 16px;
+    height: 50px;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll; } }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+

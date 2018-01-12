@@ -1,0 +1,208 @@
+/*------------------STYLES FOR LIST---------------------------------*/
+.explanation {
+  margin: 20px;
+  font-style: italic;
+  text-align: center;
+  color: #777;
+}
+
+.loginExplanation {
+  margin: 80px 10px 0 10px;
+}
+
+.row {
+    margin-top: 50px;
+}
+
+.list {
+    width: 25%;
+    min-height: 300px;
+    background-color: #FAFAFA;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #E6E6E6;
+    vertical-align: top;
+    position: relative;
+}
+
+.list:hover {
+    border-color: #FFDDE2;
+}
+
+.list h1 {
+  color: #6E6E6E;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.list input {
+  margin-bottom:0;
+}
+
+.list-inline {
+  display: inline-block;
+}
+
+.lists-container {
+  width: 80%;
+  min-height: 600px;
+  margin: 0 auto;  
+  padding: 40px;
+  position: relative;
+}
+
+.remove-list {
+  position: absolute;
+  margin: 6px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  top: 0;
+  right: 0;
+  font-weight: 700;
+  color: #205c7e;
+}
+
+
+/*------------------STYLES FOR CARD---------------------------------*/
+.remove {
+ width: 15px;
+ height: 15px;
+
+}
+
+.remove-small {
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+
+.remove-small i, .edit-small i, .remove i {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: black;
+}
+
+i:hover {
+    opacity: 0.6;
+}
+
+
+.remove-card {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.no-display {
+    display: none;
+}
+
+.card-input, input, select {
+    width: 85%;
+    padding: 14px;
+    outline: none;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+}
+
+.card {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+    background-color: #FFF;
+    border-radius: 4px;
+    margin: 10px 0;
+    color: #777;
+    position: relative;
+}
+
+
+.edit {
+    width: 15px;
+    height: 15px;
+    background: url( ../img/pen_alt_stroke.svg);
+}
+
+.edit-small {
+    width: 10px;
+    height: 10px;
+}
+
+.edit-card {
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 20px;
+}
+
+.edit:hover {
+    background: url( ../img/pen_alt_fill.svg);
+}
+
+.edit_sm:hover {
+    background: url( ../img/pen_alt_fill_sm.svg);
+}
+
+.card:hover, .card-input:hover {
+    border-color: #F4BFCD;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+input .search {
+    width: 200px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.select-list {
+    margin: 10px 0 0 0;
+}
+
+#counterOfTasks {
+  width: 83%;
+  margin: 20px;
+}
+
+#counterOfTasks p {
+  color: #777;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/*------------------STYLES FOR COUNTER OF TASKS--------------------------------*/
+
+#PercentageOfCompletedTasks {
+  padding:4px 8px;
+  text-align: center;
+  color:#fff;
+  background-color:#616161;
+}
+
+#counterOfTasks > div {
+  background-color: #f1f1f1;
+}
+
+@media (min-width:993px) {
+
+}
+
+@media (max-width:992px) {
+    
+
+}
+
+@media (max-width:600px) {
+  .list {
+    width: 90%;
+  }
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none;
+}
